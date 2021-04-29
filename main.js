@@ -2,6 +2,15 @@
 main.js: input integer to string form version program.
 input (on argv): sequence of integers separated by comma (assuming correctly formatted and is a valid integer).
 output (on stdOut): a sequence of words with each integer digit converted to its corresponding word form.
+
+EX 1: 
+input (on commandline): node main.js 3 25 209
+output (on stdOut): Three,TwoFive,TwoZeroNine
+
+EX 2:
+input (on commandline): node main.js 10 300 5
+output (on stdOut): OneZero,ThreeZeroZero,Five
+
 Created by Guangchuan Tom Shang
 */
 
@@ -9,6 +18,10 @@ Created by Guangchuan Tom Shang
 Takes in a list of strings each corresponding to valid integers and prints those integers->stringName to stdOut.
 Input: (Array) inputList: list of strings corresponding to valid integers.
 Output: (stdOut) None: prints the string name of each integer digit.
+
+EX:
+main(["3", "25", "209"]) => (stdOut) "Three,TwoFive,TwoZeroNine" (automatically with no quotes when using .str)
+main(["10", "300", "5"]) => (stdOut) "OneZero,ThreeZeroZero,Five" (automatically with no quotes when using .str)
 */
 function main(inputList) {
     var output = ""; 
@@ -26,6 +39,11 @@ function main(inputList) {
 Takes in a string of digits and returns the string name of that string of digits.
 Input: (String) inputString: string of digits.
 Output: (String) string name of inputString.
+
+EX: 
+helper("3") => "Three"
+helper("25") => "TwoFive"
+helper("209") => "TwoZeroNine"
 */
 function helper(inputString) {
     var output = "";
