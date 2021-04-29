@@ -4,7 +4,15 @@ Input: (Array) inputList: list of strings corresponding to valid integers.
 Output: (stdOut) None: prints the string name of each integer digit.
 */
 function main(inputList) {
-
+    var output = ""; 
+    for (var i = 0; i < inputList.length; i++) {
+        // add a comma in between each word!
+        if (i) {
+            output += ","
+        }
+        output += helper(inputList);
+    }
+    console.log(output);
 }
 
 /*
