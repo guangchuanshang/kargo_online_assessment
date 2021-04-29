@@ -1,3 +1,10 @@
+/* 
+main.js: input integer to string form version program.
+input (on argv): sequence of integers separated by comma (assuming correctly formatted and is a valid integer).
+output (on stdOut): a sequence of words with each integer digit converted to its corresponding word form.
+Created by Guangchuan Tom Shang
+*/
+
 /*
 Takes in a list of strings each corresponding to valid integers and prints those integers->stringName to stdOut.
 Input: (Array) inputList: list of strings corresponding to valid integers.
@@ -21,7 +28,11 @@ Input: (String) inputString: string of digits.
 Output: (String) string name of inputString.
 */
 function helper(inputString) {
-
+    var output = "";
+    for (var i = 0; i < inputString.length; i++) {
+        output += intMap.get(inputString[i]);
+    }
+    return output;
 }
 
 /* Initializes global map object to translate a string integer to its respective word. */
