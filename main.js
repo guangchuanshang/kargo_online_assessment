@@ -30,7 +30,7 @@ function main(inputList) {
         if (i) {
             output += ","
         }
-        output += helper(inputList);
+        output += helper(inputList[i]);
     }
     console.log(output);
 }
